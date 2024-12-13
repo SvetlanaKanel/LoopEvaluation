@@ -1,0 +1,19 @@
+{
+  "name": "loopevaluation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "testUI:chrome": "npx playwright test --ui --project chromium",
+    "testUI:firefox": "npx playwright test --ui --project firefox",
+    "testUI:webkit": "npx playwright test --ui --project webkit"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.1"
+  }
+}
