@@ -33,6 +33,6 @@ test.describe('Web Application', () => {
     }) => {
         expect(await webApplicationPage.inProgressColumn).toContainText(COLUMN[1]);
         expect(await webApplicationPage.inProgressListOfTasks.innerText()).toEqual(TASKS.task3);
-        expect(await webApplicationPage.designTagFromThirdTask).toContainText(TAGS[3]);
+        expect(await webApplicationPage.designTagFromInProgressFirstTask).toContainText(TAGS[3]);
     });
 });
