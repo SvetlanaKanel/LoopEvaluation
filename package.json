@@ -6,8 +6,8 @@
   "scripts": {
     "testUI:chrome": "npx playwright test --ui --project chromium",
     "testUI:firefox": "npx playwright test --ui --project firefox",
-    "testUI:webkit": "npx playwright test --ui --project webkit"
-
+    "testUI:webkit": "npx playwright test --ui --project webkit",
+    "report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
