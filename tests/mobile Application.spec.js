@@ -22,7 +22,7 @@ test.describe('Mobile Application', () => {
         expect(await mobileApplicationPage.featureTagFromToDoFirstTask).toHaveText(TAGS[0]);
     });
 
-    test('TC_05 | Verify "Offline mode" is in the "In Progress" column and has "Feature" & "High Priority”', async ({
+    test('TC_05 | Verify "Offline mode" is in the "In Progress" column and has "Feature" & "High Priority” tags', async ({
         mobileApplicationPage,
     }) => {
         expect(await mobileApplicationPage.inProgressColumn).toContainText(COLUMN[1]);
@@ -33,7 +33,7 @@ test.describe('Mobile Application', () => {
         expect(await mobileApplicationPage.highPriorityTagFromInProgressFirstTask).toHaveText(TAGS[1]);
     });
 
-    test('TC_06 | Verify "App icon design" is in the "Done" column and has "Design"', async ({
+    test('TC_06 | Verify "App icon design" is in the "Done" column and has "Design" tag', async ({
         mobileApplicationPage,
     }) => {
         expect(await mobileApplicationPage.doneColumn).toContainText(COLUMN[2]);
