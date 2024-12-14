@@ -11,7 +11,7 @@ test.describe('Web Application', () => {
         expect(await webApplicationPage.mainHeader).toHaveText(PAGE[0]);
     });
 
-    test('TC_01 | Verify "Implement user authentication" is in the "To Do" column and has tegs "Feature", "High Priority"', async ({
+    test('TC_01 | Verify "Implement user authentication" is in the "To Do" column and has "Feature", "High Priority" tags', async ({
         webApplicationPage,
     }) => {
         expect(await webApplicationPage.toDoColumn).toContainText(COLUMN[0]);
@@ -22,7 +22,7 @@ test.describe('Web Application', () => {
         expect(await webApplicationPage.highPriorityTagFromToDoFirstTask).toHaveText(TAGS[1]);
     });
 
-    test('TC_02 | Verify "Fix navigation bug" is in the "To Do" column and has teg "Bug"', async ({
+    test('TC_02 | Verify "Fix navigation bug" is in the "To Do" column and has "Bug" tag', async ({
         webApplicationPage,
     }) => {
         expect(await webApplicationPage.toDoColumn).toContainText(COLUMN[0]);
@@ -31,7 +31,7 @@ test.describe('Web Application', () => {
         expect(await webApplicationPage.bugTagFromToDoSecondTask).toContainText(TAGS[2]);
     });
 
-    test('TC_03 | Verify "Design system updates" is in the "In Progress" column and has tag "Design"', async ({
+    test('TC_03 | Verify "Design system updates" is in the "In Progress" column and has "Design" tag', async ({
         webApplicationPage,
     }) => {
         expect(await webApplicationPage.inProgressColumn).toContainText(COLUMN[1]);
