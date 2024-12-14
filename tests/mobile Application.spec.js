@@ -27,6 +27,7 @@ test.describe('Mobile Application', () => {
         expect(await mobileApplicationPage.inProgressColumn).toContainText(COLUMN[1]);
         expect(await mobileApplicationPage.inProgressListOfTasks).toContainText(TASKS.task5);
         expect(await mobileApplicationPage.featureTagFromInProgressFirstTask).toHaveText(TAGS[0]);
+        expect(await mobileApplicationPage.highPriorityTagFromInProgressFirstTask).toHaveText(TAGS[1]);
     });
 
     test('TC_06 | Verify "App icon design" is in the "Done" column and has "Design"', async ({
