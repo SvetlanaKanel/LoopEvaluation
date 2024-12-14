@@ -16,7 +16,9 @@ test.describe('Web Application', () => {
     }) => {
         expect(await webApplicationPage.toDoColumn).toContainText(COLUMN[0]);
         expect(await webApplicationPage.toDoListOfTasks.allInnerTexts()).toContain(TASKS.task1);
+        await webApplicationPage.featureTagFromToDoFirstTask.waitFor();
         expect(await webApplicationPage.featureTagFromToDoFirstTask).toHaveText(TAGS[0]);
+        await webApplicationPage.highPriorityTagFromToDoFirstTask.waitFor();
         expect(await webApplicationPage.highPriorityTagFromToDoFirstTask).toHaveText(TAGS[1]);
     });
 
@@ -25,6 +27,7 @@ test.describe('Web Application', () => {
     }) => {
         expect(await webApplicationPage.toDoColumn).toContainText(COLUMN[0]);
         expect(await webApplicationPage.toDoListOfTasks.allInnerTexts()).toContain(TASKS.task2);
+        await webApplicationPage.bugTagFromToDoSecondTask.waitFor();
         expect(await webApplicationPage.bugTagFromToDoSecondTask).toContainText(TAGS[2]);
     });
 
@@ -33,6 +36,7 @@ test.describe('Web Application', () => {
     }) => {
         expect(await webApplicationPage.inProgressColumn).toContainText(COLUMN[1]);
         expect(await webApplicationPage.inProgressListOfTasks.innerText()).toEqual(TASKS.task3);
+        await webApplicationPage.designTagFromInProgressFirstTask.waitFor();
         expect(await webApplicationPage.designTagFromInProgressFirstTask).toContainText(TAGS[3]);
     });
 });

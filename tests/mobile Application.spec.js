@@ -18,6 +18,7 @@ test.describe('Mobile Application', () => {
     }) => {
         expect(await mobileApplicationPage.toDoColumn).toContainText(COLUMN[0]);
         expect(await mobileApplicationPage.toDoListOfTasks).toContainText(TASKS.task4);
+        await mobileApplicationPage.featureTagFromToDoFirstTask.waitFor();
         expect(await mobileApplicationPage.featureTagFromToDoFirstTask).toHaveText(TAGS[0]);
     });
 
@@ -26,7 +27,9 @@ test.describe('Mobile Application', () => {
     }) => {
         expect(await mobileApplicationPage.inProgressColumn).toContainText(COLUMN[1]);
         expect(await mobileApplicationPage.inProgressListOfTasks).toContainText(TASKS.task5);
+        await mobileApplicationPage.featureTagFromInProgressFirstTask.waitFor();
         expect(await mobileApplicationPage.featureTagFromInProgressFirstTask).toHaveText(TAGS[0]);
+        await mobileApplicationPage.highPriorityTagFromInProgressFirstTask.waitFor();
         expect(await mobileApplicationPage.highPriorityTagFromInProgressFirstTask).toHaveText(TAGS[1]);
     });
 
@@ -35,6 +38,7 @@ test.describe('Mobile Application', () => {
     }) => {
         expect(await mobileApplicationPage.doneColumn).toContainText(COLUMN[2]);
         expect(await mobileApplicationPage.doneListOfTasks).toContainText(TASKS.task6);
+        await mobileApplicationPage.designTagfromDoneFirstTask.waitFor();
         expect(await mobileApplicationPage.designTagfromDoneFirstTask).toHaveText(TAGS[3]);
     });
 });
